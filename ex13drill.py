@@ -9,4 +9,4 @@ print("Your have a", skill, "skill")
 
 input("Press Enter to continue...")
 likes = input("What do you like? ")
-print("So you had a", likes, "in your life and the you get your", degree,"degree.")
+print("So you had a", likes, "in your life and the you get your", degree, "degree.")
