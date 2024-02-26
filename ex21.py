@@ -28,4 +28,4 @@ print("Here is a puzzle.") #Print a string
 
 what = add(age, subtract(height, multiply(weight, divide(iq,2)))) #Call the function
 
-print("That becomes: ", what, "Can yo do it by hand?") #Print a string
+print("That becomes: ", what, "Can you do it by hand?") #Print a string
