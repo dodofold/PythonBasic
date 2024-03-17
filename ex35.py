@@ -1,13 +1,13 @@
 from sys import exit
 
 def gold_room():
-    print("This room is full of gold. How much do you take?")
+    print("This room is full of gold coins. How much do you take?")
 
     choice = input(">")
     if "0" in choice or "1" in choice:
         how_much = int(choice)
     else:
-        dead("Man, learn to type a  number.")
+        dead("Man, learn to type a decimal number. There's no fraction around the gold coin!")
 
     if how_much < 50:
         print("Nice, you're not greedy, you win!")
@@ -21,18 +21,19 @@ def bear_room():
     print("The bear has a bunch of honey.")
     print("The fat bear is in front of another door.")
     print("How are you going to move the bear?")
+    print(f"1. Take honey\n2. Taunt bear\n3. Open door")
     bear_moved = False
 
     while True:
         choice = input("> ")
 
-        if choice == "take honey":
+        if choice == "Take honey":
             dead("The bear looks at you then slaps your face off.")
-        elif choice == "taunt bear" and not bear_moved:
+        elif choice == "Taunt bear" and not bear_moved:
             print("The bear has moved from the door.")
             print("You can go through it now.")
             bear_moved = True
-        elif choice == "taunt bear" and bear_moved:
+        elif choice == "Taunt bear" and bear_moved:
             dead("The bear gets pissed off and chews your leg off.")
         elif choice == "open door" and bear_moved:
             gold_room()
